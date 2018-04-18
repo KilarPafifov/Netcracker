@@ -11,19 +11,27 @@ namespace Netcracker
         public static bool TestGetFunctionValue()
         {
             ControlFlowStatements1 test = new ControlFlowStatements1();
-            if ((test.GetFunctionValue(-1)) == 7)
-            {
-                return true;
-            }
-            else
+            if (Math.Round(test.GetFunctionValue(2),1) != 1.8)
             {
                 return false;
             }
+           
+            if(test.GetFunctionValue(0) != 6)
+            {
+                return false;
+            }
+
+            if (test.GetFunctionValue(-2) != 8)
+            {
+                return false;
+            }
+
+            return true;
         }
+
         static void Main(string[] args)
         {
-
-            
+            Console.WriteLine(TestGetFunctionValue());
             Console.ReadLine();
         }
     }

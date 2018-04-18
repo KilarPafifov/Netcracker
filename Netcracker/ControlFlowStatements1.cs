@@ -8,11 +8,13 @@ namespace Netcracker
 {
     class ControlFlowStatements1 : IControlFlowStatements1
     {
-        public float GetFunctionValue(float x)
+        public double GetFunctionValue(double x)
         {
+           
             if(x > 0)
             {
-                return 2 * (Math.Abs(x));
+
+                return 2 * (Math.Sin(x));
             }
             else
             { 

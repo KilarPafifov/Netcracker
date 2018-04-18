@@ -8,6 +8,6 @@ namespace Netcracker
 {
     public interface IControlFlowStatements1
     {
-        float GetFunctionValue(float x);
+        double GetFunctionValue(double x);
     }
 }
