@@ -29,9 +29,17 @@ namespace Netcracker
             return true;
         }
 
+    /*    public static bool TestInitArray()
+        {
+            IControlFlowStatements1 mas = new IControlFlowStatements1();
+
+        }
+        */
         static void Main(string[] args)
         {
-            Console.WriteLine(TestGetFunctionValue());
+            ControlFlowStatements1 mas = new ControlFlowStatements1();
+
+            Console.WriteLine(mas.initArray());
             Console.ReadLine();
         }
     }
