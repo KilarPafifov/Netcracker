@@ -22,46 +22,31 @@ namespace Netcracker
             }
         }
 
-        public int initArray()
+        public int[,] initArray()
         {
-            int[][] array = new int[8][];
-            for (int i = 0; i < 8; i++)
-            {
-                array[i] = new int[5];
-            }    
+            int[,] array = new int[8,5];
+            
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    array[i][j] = i * j;
-                    Console.Write(Convert.ToString(array[i][j]));
-                    Console.Write(' ');
+                    array[i,j] = i * j;
                 }
-                Console.WriteLine();
             }
-            return 0;
+            return array;
             
         }
-        public int getMinValue(int[][] array)
+        public int getMinValue(int[,] array)
         {
-            int maxI = 0;
-            int maxJ = 0;
-            for(int i = 0; i < array.Rank; i++)
-            {
-                maxI = i;
-            }
-            for (int j = 0; j < array.Rank; j++)
-            {
-                maxI = j;
-            }
-            int minValue = -100;
+
+            int minValue = 500;
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    if (minValue > array[i][j])
+                    if (minValue > array[i,j])
                     {
-                        minValue = array[i][j];
+                        minValue = array[i,j];
                     }
                 }
             }

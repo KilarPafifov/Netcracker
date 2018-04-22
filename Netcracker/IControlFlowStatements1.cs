@@ -9,7 +9,7 @@ namespace Netcracker
     public interface IControlFlowStatements1
     {
         double GetFunctionValue(double x);
-        int initArray();
-        int getMinValue(int[][] array);
+        int[,] initArray();
+        int getMinValue(int[,] array);
     }
 }

@@ -29,17 +29,48 @@ namespace Netcracker
             return true;
         }
 
-    /*    public static bool TestInitArray()
+        public static bool TestInitArray()
         {
-            IControlFlowStatements1 mas = new IControlFlowStatements1();
+            //arrange
+            ControlFlowStatements1 mas = new ControlFlowStatements1();
+            int[,] expectedArray = { { 0, 0, 0, 0, 0 }, { 0, 1, 2, 3, 4 } };
+            //act
+            int[,] actualArray = mas.initArray();
+            //assert
+            for (int i = 0; i < 2; i++)
+            {
+                for(int j = 0; j < 5; j++)
+                {
+                    if(expectedArray[i,j] != actualArray[i, j])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
 
         }
-        */
+        public static bool TestGetMinValue()
+        {
+            //arrange
+            ControlFlowStatements1 minValue = new ControlFlowStatements1();
+            int expectedValue = 0;
+            //act
+            //assert
+            if(expectedValue != minValue.getMinValue(minValue.initArray()))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        
         static void Main(string[] args)
         {
-            ControlFlowStatements1 mas = new ControlFlowStatements1();
-
-            Console.WriteLine(mas.initArray());
+            Console.WriteLine(TestGetMinValue());
             Console.ReadLine();
         }
     }
