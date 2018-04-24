@@ -11,5 +11,7 @@ namespace Netcracker
         double GetFunctionValue(double x);
         int[,] initArray();
         int getMinValue(int[,] array);
+        BankDeposit calculateBankDeposit(double P);
+
     }
 }
